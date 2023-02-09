@@ -7,8 +7,7 @@ The original MumsNet database is placed in the new 3NF database. The new databas
 
 Below is a figure of the new database “MUMSNETDB” (figure 1): 
 
-
-
+![MUMSNET OLTP](https://user-images.githubusercontent.com/55437013/217838293-368fdebb-869a-45b2-b44b-d112cd2254ee.png)
 
 Moreover, in the database script, triggers were added to update the database every time a new record is inserted, modified, or deleted in “OrderItem” table. Two new columns were added to the table which are “TotalLineItems” and “SavedTotal,” where “TotalLineItems” will show the total number of items added and “SavedTotal” will show the total order value. The triggers will update the two new columns whenever a new order is added to the database. 
 
@@ -17,4 +16,7 @@ In addition, two stored procedures were added to create “OrderGroup” and “
 Before creating the data source, data source view, cube and dimensions, a set of dimension tables and fact tables were created following the star schema. Using the normalized OLTP database “MUMSNETDB,” an OLAP database was created to develop business intelligence. 
 
 The below figure shows the OLAP database (star schema) for “MUMSNETDB” (figure 2):
+
+![image](https://user-images.githubusercontent.com/55437013/217838850-74dce816-394c-46f1-8aca-8d4c37086433.png)
+
 
